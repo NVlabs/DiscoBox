@@ -25,7 +25,7 @@ All of our models are trained and tested using [automatic mixed precision](https
 
 ## Installation
 
-This implementation is based on [PyTorch==1.9.0](https://github.com/pytorch/pytorch/tree/v1.9.0), [mmcv==2.13.0](https://github.com/open-mmlab/mmcv/tree/v1.3.13), and [mmdetection==2.10.0](https://github.com/open-mmlab/mmdetection/tree/v2.10.0)
+This implementation is based on [PyTorch==1.9.0](https://github.com/pytorch/pytorch/tree/v1.9.0), [mmcv==1.3.13](https://github.com/open-mmlab/mmcv/tree/v1.3.13), and [mmdetection==2.10.0](https://github.com/open-mmlab/mmdetection/tree/v2.10.0)
 
 
 Please refer to [get_started.md](docs/get_started.md) for installation.
