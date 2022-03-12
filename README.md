@@ -175,13 +175,13 @@ bash tools/dist_test.sh \
 ResNet-50:
 
 ```
-python tools/json2mat.pywork_dirs/voc_r50_results.json work_dirs/voc_r50_results.mat
+python tools/json2mat.py work_dirs/voc_r50_results.json work_dirs/voc_r50_results.mat
 ```
 
 ResNet-101:
 
 ```
-python tools/json2mat.pywork_dirs/voc_r101_results.json work_dirs/voc_r101_results.mat
+python tools/json2mat.py work_dirs/voc_r101_results.json work_dirs/voc_r101_results.mat
 ```
 
 ***Step 3: evaluation***
