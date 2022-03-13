@@ -193,6 +193,14 @@ Please visit [BBTP](https://github.com/chengchunhsu/WSIS_BBTP) for the evaluatio
 
 Please visit [this repository](https://github.com/voidrank/SCOT).
 
+## Visualization
+
+ResNeXt-101
+
+```
+python tools/test.py configs/discobox/discobox_solov2_x101_dcn_fpn_3x.py coco_x101_dcn_fpn_3x.pth --show --show-dir discobox_vis_x101
+```
+
 ## LICENSE
 
 Please check the LICENSE file. DiscoBox may be used non-commercially, meaning for research or 
