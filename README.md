@@ -4,10 +4,12 @@
 ## DiscoBox: Weakly Supervised Instance Segmentation and Semantic Correspondence from Box Supervision
 
 <div style="bottom:20px" align="center">
-  <img src="resources/discobox-intro.png" width="400"/>
-</div>
 
 
+
+![ezgif-1-3ae7215394](https://user-images.githubusercontent.com/6581457/162640237-f7145903-3c39-47fe-b3d0-ab2f3f01bf99.gif)
+  
+  </div>
 
 ### [Paper](https://arxiv.org/abs/2105.06464) | [Project page](https://github.com/NVlabs/DiscoBox) | [Demo (Youtube)](https://youtu.be/fuesBLYSeu8) | [Demo (Bilibili)](https://www.bilibili.com/video/BV1dL41137oJ/)
 
