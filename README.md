@@ -9,7 +9,7 @@
   
 </div>
 
-### [Paper](https://arxiv.org/abs/2105.06464) | [Project page](https://github.com/NVlabs/DiscoBox) | [Demo (Youtube)](https://youtu.be/fuesBLYSeu8) | [Demo (Bilibili)](https://www.bilibili.com/video/BV1dL41137oJ/)
+### [Paper](https://arxiv.org/abs/2105.06464) | [Blog](https://developer.nvidia.com/blog/segment-objects-without-masks-and-reduce-annotation-effort-using-the-discobox-dl-framework/) | [Demo (Youtube)](https://youtu.be/fuesBLYSeu8) | [Demo (Bilibili)](https://www.bilibili.com/video/BV1dL41137oJ/)
 
 DiscoBox: Weakly Supervised Instance Segmentation and Semantic Correspondence from Box Supervision.<br>
 [Shiyi Lan](https://voidrank.github.io/), [Zhiding Yu](https://chrisding.github.io/), [Chris Choy](https://chrischoy.github.io/), [Subhashree Radhakrishnan](https://www.linkedin.com/in/subhashree-radhakrishnan-b0b0048b), [Guilin Liu](https://liuguilin1225.github.io/), [Yuke Zhu](https://www.cs.utexas.edu/~yukez/), [Larry Davis](http://users.umiacs.umd.edu/~lsd/), [Anima Anandkumar](http://tensorlab.cms.caltech.edu/users/anima/)<br>
