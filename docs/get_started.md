@@ -95,8 +95,8 @@ If mmcv and mmcv-full are both installed, there will be `ModuleNotFoundError`.
 4. Clone the MMDetection repository.
 
     ```shell
-    git clone https://github.com/open-mmlab/mmdetection.git
-    cd mmdetection
+    git clone git clone https://github.com/NVlabs/DiscoBox.git
+    cd DiscoBox
     ```
 
 5. Install build requirements and then install MMDetection.
