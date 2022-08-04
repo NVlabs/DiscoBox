@@ -127,6 +127,18 @@ bash tools/dist_test.sh \
 ```
 
 
+## Box-conditioned inference
+
+You can use `DiscoBox` for autolabeling given images and tight bounding boxes. We call this box-conditioned inference. Here is an example of box-conditioned inference on COCO val2017 with `x101_dcn_fpn` arch:
+
+```
+bash tools/dist_test.sh \
+     config/discobox/boxcond_discobox_solov2_x101_dcn_fpn_3x.py \
+     work_dirs/x101_dcn_fpn_coco_3x.pth 8 \
+     --format-only \
+     --options "jsonfile_prefix=work_dirs/coco_x101_dcn_fpn_results.json"
+```
+
 
 ### Pascal VOC 2012 (COCO API)
 
