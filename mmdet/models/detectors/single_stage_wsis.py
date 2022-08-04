@@ -13,6 +13,8 @@ from .. import builder
 from ..builder import DETECTORS
 from .base import BaseDetector
 
+from mmcv.runner import auto_fp16
+
 
 @DETECTORS.register_module()
 class SingleStageWSInsDetector(BaseDetector):
@@ -223,3 +225,38 @@ class SingleStageWSInsTSDetector(SingleStageWSInsDetector):
 
     def aug_test(self, imgs, img_metas, rescale=False):
         raise NotImplementedError
+
+
+@DETECTORS.register_module()
+class BoxConditionalInference(SingleStageWSInsDetector):
+    def forward_dummy(self, img, box):
+        x = self.extract_feat(img)
+        outs = self.bbox_head(x, gt_bbox=box)
+        return outs 
+
+    @auto_fp16(apply_to=('img', ))
+    def forward(self, img, img_metas, return_loss=True, **kwargs):
+        """Calls either :func:`forward_train` or :func:`forward_test` depending
+        on whether ``return_loss`` is ``True``.
+
+        Note this setting will change the expected inputs. When
+        ``return_loss=True``, img and img_meta are single-nested (i.e. Tensor
+        and List[dict]), and when ``resturn_loss=False``, img and img_meta
+        should be double nested (i.e.  List[Tensor], List[List[dict]]), with
+        the outer list indicating test time augmentations.
+        """
+        if return_loss:
+            return self.forward_train(img, img_metas, **kwargs)
+        else:
+            return self.forward_test(img, img_metas, **kwargs)
+    
+    def simple_test(self, img, img_meta, gt_bboxes, gt_labels, gt_masks, rescale=False):
+        x = self.extract_feat(img)
+        outs = self.bbox_head(x, eval=True)
+
+        mask_feat_pred = self.mask_feat_head(
+            x[self.mask_feat_head.
+              start_level:self.mask_feat_head.end_level + 1])
+        seg_inputs = outs + (mask_feat_pred, img_meta, self.test_cfg, rescale)
+        results = self.bbox_head.get_seg(*seg_inputs, img=img, gt_bboxes=gt_bboxes, gt_labels=gt_labels, gt_masks=gt_masks)
+        return results
