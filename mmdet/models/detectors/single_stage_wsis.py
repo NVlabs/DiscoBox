@@ -250,7 +250,7 @@ class BoxConditionalInference(SingleStageWSInsDetector):
         else:
             return self.forward_test(img, img_metas, **kwargs)
     
-    def simple_test(self, img, img_meta, gt_bboxes, gt_labels, gt_masks, rescale=False):
+    def simple_test(self, img, img_meta, gt_bboxes, gt_labels, gt_masks=None, rescale=False):
         x = self.extract_feat(img)
         outs = self.bbox_head(x, eval=True)
 
