@@ -1,6 +1,9 @@
 [![NVIDIA Source Code License](https://img.shields.io/badge/license-NSCL-blue.svg)](LICENSE)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
 
+
+**We quit maintaining this project. Please check our new work, [Mask Auto-labeler](https://github.com/NVlabs/mask-auto-labeler) for more powerful models**
+
 ## DiscoBox: Weakly Supervised Instance Segmentation and Semantic Correspondence from Box Supervision
 
 <div style="bottom:20px; width: 00px; " align="center">
