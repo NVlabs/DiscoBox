@@ -136,7 +136,7 @@ You can use `DiscoBox` for autolabeling given images and tight bounding boxes. W
 
 ```
 bash tools/dist_test.sh \
-     config/discobox/boxcond_discobox_solov2_x101_dcn_fpn_3x.py \
+     configs/discobox/boxcond_discobox_solov2_x101_dcn_fpn_3x.py \
      work_dirs/x101_dcn_fpn_coco_3x.pth 8 \
      --format-only \
      --options "jsonfile_prefix=work_dirs/coco_x101_dcn_fpn_results.json"
